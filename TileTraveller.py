@@ -18,24 +18,138 @@ start = (x, y)
 victory = False
 print ("You can travel: (N)orth.")
 
-if not direction in valid_direction:
+
+while not victory:
+    
+    direction = input("Direction: ")
+
+    if not direction in valid_direction:
         print("Not a valid direction!")
     else:
         if direction == "s" or direction == "S":
             y -= 1
             start = (x, y)
+            
+            if start == (2, 1):
+                print("You can travel: (N)orth.")
+                valid_direction = "nN"
+            elif start == (3, 1):
+                print("Victory!")
+                victory = True
+            elif start == (2, 2):
+                print("You can travel: (S)outh or (W)est.")
+                valid_direction = "wWsS"
+            elif start == (2, 3):
+                print("You can travel: (E)ast or (W)est.")
+                valid_direction = "wWeE"
+            elif start == (3, 3):
+                print("You can travel: (S)outh or (W)est.")
+                valid_direction = "sSwW"
+            elif start == (3, 2):
+                print("You can travel: (N)orth or (S)outh.")
+                valid_direction = "sSnN"
+            elif start == (1, 1):
+                print("You can travel: (N)orth.")
+                valid_direction = "nN"
+            elif start == (1, 3):
+                print("You can travel: (E)ast or (S)outh.")
+                valid_direction = "sSeE"
+            elif start == (1, 2):
+                print("You can travel: (N)orth or (E)ast or (S)outh.")
+                valid_direction = "nNeEsS"
 
         elif direction == "n" or direction == "N":
             y += 1
             start = (x, y)
         
+            if start == (2, 1):
+                print("You can travel: (N)orth.")
+                valid_direction = "nN"
+            elif start == (3, 1):
+                print("Victory!")
+                victory = True
+            elif start == (2, 2):
+                print("You can travel: (S)outh or (W)est.")
+                valid_direction = "wWsS"
+            elif start == (2, 3):
+                print("You can travel: (E)ast or (W)est.")
+                valid_direction = "wWeE"
+            elif start == (3, 3):
+                print("You can travel: (S)outh or (W)est.")
+                valid_direction = "sSwW"
+            elif start == (3, 2):
+                print("You can travel: (N)orth or (S)outh.")
+                valid_direction = "sSnN"
+            elif start == (1, 1):
+                print("You can travel: (N)orth.")
+                valid_direction = "nN"
+            elif start == (1, 3):
+                print("You can travel: (E)ast or (S)outh.")
+                valid_direction = "sSeE"
+            elif start == (1, 2):
+                print("You can travel: (N)orth or (E)ast or (S)outh.")
+                valid_direction = "nNeEsS"
+
         elif direction == "w" or direction == "W":
             x -= 1
             start = (x, y)
-            
+
+            if start == (2, 1):
+                print("You can travel: (N)orth.")
+                valid_direction = "nN"
+            elif start == (3, 1):
+                print("Vicotry!")
+                victory = True
+            elif start == (2, 2):
+                print("You can travel: (S)outh or (W)est.")
+                valid_direction = "wWsS"
+            elif start == (2, 3):
+                print("You can travel: (E)ast or (W)est.")
+                valid_direction = "wWeE"
+            elif start == (3, 3):
+                print("You can travel: (S)outh or (W)est.")
+                valid_direction = "sSwW"
+            elif start == (3, 2):
+                print("You can travel: (N)orth or (S)outh.")
+                valid_direction = "sSnN"
+            elif start == (1, 1):
+                print("You can travel: (N)orth.")
+                valid_direction = "nN"
+            elif start == (1, 3):
+                print("You can travel: (E)ast or (S)outh.")
+                valid_direction = "sSeE"
+            elif start == (1, 2):
+                print("You can travel: (N)orth or (E)ast or (S)outh.")
+                valid_direction = "nNeEsS"
+
         elif direction == "e" or direction == "E":
             x += 1
             start = (x, y)
-        
 
- 
+            if start == (2, 1):
+                print("You can travel: (N)orth.")
+                valid_direction = "nN"
+            elif start == (3, 1):
+                print("You are victorious!")
+                victory = True
+            elif start == (2, 2):
+                print("You can travel: (S)outh or (W)est.")
+                valid_direction = "wWsS"
+            elif start == (1, 1):
+                print("You can travel: (N)orth.")
+                valid_direction = "nN"
+            elif start == (2, 3):
+                print("You can travel: (E)ast or (W)est.")
+                valid_direction = "wWeE"
+            elif start == (3, 3):
+                print("You can travel: (S)outh or (W)est.")
+                valid_direction = "sSwW"
+            elif start == (3, 2):
+                print("You can travel: (N)orth or (S)outh.")
+                valid_direction = "sSnN"
+            elif start == (1, 3):
+                print("You can travel: (E)ast or (S)outh.")
+                valid_direction = "sSeE"
+            elif start == (1, 2):
+                print("You can travel: (N)orth or (E)ast or (S)outh.")
+                valid_direction = "sSeEnN"
