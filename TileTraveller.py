@@ -9,6 +9,19 @@
 #og hvert hann væri þá að fara.
 #ef suður þá færist hann neðar ef norður, ef austur þá hægri og ef vestur þá vinstri.
 
+
+#Commentin:
+
+#Which implementation was easier and why?
+#Ég myndi segja að fyrra implementationið var auðveldara 
+#þar sem hugsunin var einfaladri fannst mér og auðveldara að fá kóðann til að gera það sem að ég vildi að hann myndi gera
+
+#Which implementation is more readable and why?
+#Seinni implementationið með föllunum er mun lesanlegara, einfaldlega vegna þess að kóðinn er ekki eins clusteraður.
+
+#Which problems in the first implementations were you able to solve with the latter implementation?
+#föllin leystu aðalega eitt vandamál, sem var ólesanlegur kóði og kanski óþarfa flókinn kóði.
+
 x = 1
 y = 1
 
@@ -69,5 +82,4 @@ while start != (3, 1):
 
 print("Victory!")
 
-
-
+#Git link https://github.com/Danield1818/tileTraveller.git
