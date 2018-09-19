@@ -20,8 +20,6 @@ def game(m):
     if start == (2, 1):
         print("You can travel: (N)orth.")
         m = "nN"
-    elif start == (3, 1):
-        print("Victory!")
     elif start == (2, 2):
         print("You can travel: (S)outh or (W)est.")
         m = "wWsS"
@@ -33,7 +31,7 @@ def game(m):
         m = "sSwW"
     elif start == (3, 2):
         print("You can travel: (N)orth or (S)outh.")
-        m = "sS"
+        m = "nNsS"
     elif start == (1, 1):
         print("You can travel: (N)orth.")
         m = "nN"
@@ -47,11 +45,15 @@ def game(m):
 
 
 while start != (3, 1):
+
     valid_direction = game(valid_direction)
     direction = input("Direction: ")
-    if not direction in valid_direction:
+
+    while direction not in valid_direction:
         print("Not a valid direction!")
-    else:
+        direction = input("Direction: ")
+
+    if direction in valid_direction:
         if direction == "s" or direction == "S":
             y -= 1
             start = (x, y)
@@ -65,7 +67,7 @@ while start != (3, 1):
             x += 1
             start = (x, y)
 
-print("Vicoty!")
+print("Victory!")
 
 
 
